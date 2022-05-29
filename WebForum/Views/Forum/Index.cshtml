@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Forum>
+
+<div>
+    <div>
+        
+        
+            <div id ="content_section">
+                <div id = "main_content">
+                    <div class= "frame">
+                     <div id = "boardindex_table">
+                    <table class = "table_list">
+                        
+                        <tbody class = "header" id= "category_2">
+                            <tr>
+                                <td colspan="4">
+                                    <div class = "cat bar">
+                                        <h3 class = "catbg">
+                                            <a >Topics</a>  
+                                        </h3>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        @foreach (var forum in Model)
+                        {
+                         <tbody class="content" id="category_2_boards">
+                            <tr id="board_6" class="windowbg2">
+                                <td class="info">
+                                    <h4>
+                                        <a class="subject" asp-area="" asp-controller="Forum" asp-action="Topic" asp-route-id="@forum.Id" name="b6">@forum.Title </a>
+                                    </h4>
+                                   
+                                     
+                                    <p>@forum.Description</p>
+                                </td>
+                                   <td>
+                                    <p>@forum.Created</p>
+                                </td>
+                            </tr>
+                            <tr>
+                             
+                            </tr>
+                        </tbody>
+                        <tbody class="divider">
+				            <tr>
+					            <td colspan="4"></td>
+				            </tr>
+			            </tbody>
+                        }
+                    </table>
+                     </div>
+                    </div>
+                </div>
+            </div>
+           @* <tr>
+                <td>    
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index">@forum.Title</a>                                           
+                </td>
+                <td>
+                    @forum.Description
+                </td>
+            </tr>*@
+        
+    </div>
+</div>

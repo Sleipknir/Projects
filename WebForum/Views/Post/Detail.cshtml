@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Post>
+@using WebForum.Models
+
+@foreach (var item in Model)
+{
+    <h2> @item.Forum</h2>
+}
+    
+  
+
+
+<h1>Post Index</h1>
+
+<table>      
+        @foreach (var post in Model)
+        {
+        
+        <tbody class="content" id="category_2_boards">
+            <tr id="board_6" class="windowbg2">
+                <td>    
+                   <p >@post.Title      </p>                               
+                </td>
+                <td>
+                    <p>@post.UserName</p>
+                </td>
+                 <td>
+                    <p>@post.Content</p>    
+                </td>
+            </tr>
+        
+        </tbody>
+        }
+</table>

@@ -1,0 +1,20 @@
+﻿@using WebForum.Data
+@model WebForum.ViweModels.NewPostVM
+
+
+
+<form method="post" asp-action="AddPost">
+  <div class="form-group">
+    <label asp-for="Title">Topic Title</label>
+    <input asp-for="Title" class="form-control" placeholder="Enter Title">
+    
+  </div>
+  <div class="form-group">
+    <label asp-for="Content">Description</label>
+    <textarea asp-for="Content" class="form-control" placeholder="Description"></textarea>
+    
+  </div>
+  
+  <button type="submit" id="submitPostBtn" class="btn btn-primary">Submit</button>
+  <input asp-for="ForumId" type="hidden"></input>
+</form>
